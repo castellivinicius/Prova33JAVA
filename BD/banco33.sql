@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS tratado;
+DROP TABLE IF EXISTS guerra;
+DROP TABLE IF EXISTS estado;
 CREATE TABLE estado(
 	id_estado serial NOT NULL PRIMARY KEY,
 	nome varchar(200),
@@ -15,7 +18,7 @@ CREATE TABLE tratado(
 	FOREIGN KEY (id_signatarioUm) REFERENCES estado(id_estado),
 	FOREIGN KEY (id_signatarioDois) REFERENCES estado(id_estado)
 );
-
+/*
 CREATE TABLE guerra(
 	id_guerra serial NOT NULL PRIMARY KEY,
 	id_atacante serial NOT NULL,
@@ -25,4 +28,4 @@ CREATE TABLE guerra(
 	dataFim date,
 	FOREIGN KEY (id_atacante) REFERENCES estado(id_estado),
 	FOREIGN KEY (id_defensor) REFERENCES estado(id_estado)
-);
+);*/
